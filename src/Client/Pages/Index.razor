@@ -1,7 +1,423 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+@inject IJSRuntime jsRuntime
 
-Welcome to your new app.
+<nav class="navbar navbar-expand-lg fixed-top ftco-navbar-light" id="navbar">
+    <div class="container">
+        <a class="navbar-brand align-items-center" href="/">
+            Kristian.Code
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#home"))" >Home</a></li>
+                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#about"))" >About</a></li>
+                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#portfolio"))">Portfolio</a></li>
+                @*<li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>*@
+                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#contactme"))">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section class="hero-wrap" id="home" style="background-image: url('images/bg_1.jpeg');">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+            <div class="col-lg-7">
+                <div class="text mt-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                    <span class="subheading">Hi There!</span>
+                    <h1 class="mb-4">
+                        I am Kristian <br>
+                        <span class="typewrite" data-period="2000" data-type='[ "A Full-Stack developer", "I love to code.", "Love to learn" ]'>
+                            <span class="wrap"></span>
+                        </span>
+                    </h1>
+                    <div class="w-md-75 w-100">
+                        <p class="mb-4">
+                            I'm Energetic Software Developer with more than @(DateTime.Now.Year - 2015) years of professional experience and 20+ successful software projects.
+                        </p>
+                        <p>
+                            <a @onclick="@(() => ScrollTo("#contactme"))" class="btn btn-primary p-4 py-3">
+                                Contact Me <span class="ion-ios-arrow-round-forward"></span>
+                            </a>
+                            <a @onclick="@(() => ScrollTo("#portfolio"))" class="btn btn-white p-4 py-3 ms-lg-2">
+                                View Portfolio <span class="ion-ios-arrow-round-forward"></span>
+                            </a>
+                        </p>
+                        <p class="social-media mt-5">
+                            <a href="https://www.facebook.com/K1k0o"><span class="ion-ios-add"></span> Facebook</a>
+                            <a href="https://twitter.com/kris_mariyanov"><span class="ion-ios-add"></span> Twitter</a>
+                            <a href="https://www.linkedin.com/in/kristian-mariyanov"><span class="ion-ios-add"></span> Linkedin</a>
+                            <a href="https://www.instagram.com/kristian.code"><span class="ion-ios-add"></span> Instagram</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section" id="about">
+    <div class="container-xl">
+        <div class="row g-xl-5">
+            <div class="col-md-6 d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <div class="img img-about" style="background-image: url(images/about.jpg);">
+                </div>
+            </div>
+            <div class="col-md-6 heading-section aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="my-5">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="aboutme-tab" data-bs-toggle="tab" href="#aboutme" role="tab" aria-controls="aboutme" aria-selected="true">About Me</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="skills-tab" data-bs-toggle="tab" href="#skills" role="tab" aria-controls="skills" aria-selected="false">Skills</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="experience-tab" data-bs-toggle="tab" href="#experience" role="tab" aria-controls="experience" aria-selected="false">Experience</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content py-4" id="myTabContent">
+                        <div class="tab-pane fade show active" id="aboutme" role="tabpanel" aria-labelledby="aboutme-tab">
+                            <h2 class="mb-4">My Story</h2>
+                            <p>
+                                Started my programming education before more than @(DateTime.Now.Year - 2014) years. Over the years my main focus was on <strong>Web and Cloud technologies</strong> but I also gain significant knowledge in different fields like <strong>Blockchain</strong>, <strong>Big Data</strong>, <strong>Reliability and Scalability</strong>.
+                                <h3 class="mb-4">I'm always passionate about coding and learning new things.</h3>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+                            <h2 class="mb-4">Skills</h2>
+                            <p></p>
+                            <div class="row mt-5">
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>C#</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>Javascript</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>Blazor</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width:95%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>HTML / CSS</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>UI/UX</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>Blockchain & Web3</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>Azure</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                                    <div class="progress-wrap">
+                                        <h3>Scalable systems</h3>
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                        <div class="w-100">
+                                            <h2>Senior Software Engineer</h2>
+                                            <span class="date">2019-Present</span> <span class="position"><i class="ion-ios-pin me-2"></i>Progress Software</span>
+                                        </div>
+                                    </div>
+                                    <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                                        <div class="w-100">
+                                            <h2>Senior Software Engineer</h2>
+                                            <span class="date">2018-2019</span> <span class="position"><i class="ion-ios-pin me-2"></i>Zoomd</span>
+                                        </div>
+                                    </div>
+                                    <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                                        <div class="w-100">
+                                            <h2>Software Engineer</h2>
+                                            <span class="date">2017-2018</span> <span class="position"><i class="ion-ios-pin me-2"></i>ZenCodeo</span>
+                                        </div>
+                                    </div>
+                                    <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                                        <div class="w-100">
+                                            <h2>Software Manager & Team Lead</h2>
+                                            <span class="date">2016-2017</span> <span class="position"><i class="ion-ios-pin me-2"></i>Software University</span>
+                                        </div>
+                                    </div>
+                                    <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                                        <div class="w-100">
+                                            <h2>Software Engineer</h2>
+                                            <span class="date">2014-2016</span> <span class="position"><i class="ion-ios-pin me-2"></i>Software University</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section-counter img" style="background-image: url(images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row section-counter">
+            <div class="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <div class="icon">
+                        <span class="flaticon-code"></span>
+                    </div>
+                    <div class="text">
+                        <h2 class="number"><span class="countup">219000</span></h2>
+                        <span class="caption">Lines of code</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <div class="icon">
+                        <span class="flaticon-complete"></span>
+                    </div>
+                    <div class="text">
+                        <h2 class="number"><span class="countup">27</span></h2>
+                        <span class="caption">Project Completed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
+                <div class="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                    <div class="icon">
+                        <span class="flaticon-coffee"></span>
+                    </div>
+                    <div class="text">
+                        <h2 class="number"><span class="countup">4380</span></h2>
+                        <span class="caption">Cups of Coffee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section ftco-project" id="portfolio">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section text-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                <span class="subheading">Portfolio</span>
+                <h2>My Latest Work</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/telerik-project.png);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://www.telerik.com/blazor-ui">Telerik UI For Blazor</a></h3>
+                        <span>Blazor Component Library</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/repl-project.png);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://blazorrepl.telerik.com/">Telerik REPL for Blazor</a></h3>
+                        <span>Blazor IDE In The Browser</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-abstract.jpg);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://zoomd.com/the-platform/">Zoomd Platform</a></h3>
+                        <span>Scallable User Acquisition Platform</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-abstract.jpg);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://zoomd.com/">Marlin</a></h3>
+                        <span>Automation Tool</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/talkt-project.png);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://smb.talkt.com/crm-smb/">Talkt</a></h3>
+                        <span>Communication Software As A Service</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/suls-project.png);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://softuni.bg">Software University Learning Platforms</a></h3>
+                        <span>Educational portal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/dexeth-project.png);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="#">DexETH</a></h3>
+                        <span>Decentralized Cryptocurrency Exchange</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 aos-init aos-animate" data-aos="flip-left" data-aos-delay="100" data-aos-duration="1000">
+                <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/happy-me-project.png);">
+                    <div class="overlay"></div>
+                    <div class="text text-center p-4">
+                        <h3><a href="https://happyme.site">HappyMe</a></h3>
+                        <span>Kids Educational platform</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ftco-section ftco-no-pb" id="contactme">
+    <div class="container-fluid-xl">
+        <div class="row no-gutters justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row g-0">
+                        <div class="col-lg-12 order-lg-last">
+                            <div class="contact-wrap w-100 p-md-5 p-4">
+                                <h3>Contact me</h3>
+                                <p class="mb-4">I'm open for any suggestion or just to have a chat</p>
+                                <div class="row mb-4">
+                                    <div class="col-md-4">
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="text">
+                                                <p><span>My Address:</span> Sofia, Bulgaria</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="text">
+                                                <p><span>My Email:</span><span>kristian.mariyanov@gmail.com</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="dbox w-100 d-flex align-items-start">
+                                            <div class="text social-media">
+                                                <p><span>Social:</span>
+                                        <a href="https://www.facebook.com/K1k0o">Facebook</a>
+                                        <a href="https://twitter.com/kris_mariyanov">Twitter</a>
+                                        <a href="https://www.instagram.com/kristian.code/">Instagram</a>
+                                        <a href="https://www.linkedin.com/in/kristian-mariyanov/">LinkedIn</a>
+                                    </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<form id="contactForm" name="contactForm" class="contactForm">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 g-recaptcha" data-sitekey="6LfksjAeAAAAANSeV7t7076if2aFb4CzXnRA7GRf"></div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <input type="submit" value="Send Message" class="btn btn-primary">
+                                                <div class="submitting"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>*@
+                            </div>
+                        </div>
+                        <div class="col-lg-6 d-flex align-items-stretch">
+                            <div id="map" class="bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    public async Task ScrollTo(string selector)
+    {
+        await jsRuntime.InvokeVoidAsync("scrollToSection", selector);
+    }
+}
