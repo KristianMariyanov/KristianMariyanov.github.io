@@ -13073,9 +13073,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5,
         background: #0779e4;
     }
 
-.img-about {
+.img.img-about {
     height: 600px;
     position: relative;
+    background-size: contain;
     width: 100%;
 }
 
