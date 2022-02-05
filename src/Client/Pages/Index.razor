@@ -5,15 +5,15 @@
 <nav class="navbar navbar-expand-lg fixed-top ftco-navbar-light" id="navbar">
     <div class="container">
         <a class="navbar-brand align-items-center" href="/">
-            Kristian.Code
+            kristian.code
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#home"))" >Home</a></li>
-                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#about"))" >About</a></li>
+                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#home"))">Home</a></li>
+                <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#about"))">About</a></li>
                 <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#portfolio"))">Portfolio</a></li>
                 @*<li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>*@
                 <li class="nav-item"><a class="nav-link cursor-pointer" @onclick="@(() => ScrollTo("#contactme"))">Contact</a></li>
@@ -36,7 +36,7 @@
                     </h1>
                     <div class="w-md-75 w-100">
                         <p class="mb-4">
-                            I'm Energetic Software Developer with more than @(DateTime.Now.Year - 2015) years of professional experience and 20+ successful software projects.
+                            I'm energetic Software Developer with more than @(DateTime.Now.Year - 2015) years of professional experience and 20+ successful software projects.
                         </p>
                         <p>
                             <a @onclick="@(() => ScrollTo("#contactme"))" class="btn btn-primary p-4 py-3">
@@ -47,10 +47,11 @@
                             </a>
                         </p>
                         <p class="social-media mt-5">
-                            <a href="https://www.facebook.com/K1k0o"><span class="ion-ios-add"></span> Facebook</a>
-                            <a href="https://twitter.com/kris_mariyanov"><span class="ion-ios-add"></span> Twitter</a>
-                            <a href="https://www.linkedin.com/in/kristian-mariyanov"><span class="ion-ios-add"></span> Linkedin</a>
-                            <a href="https://www.instagram.com/kristian.code"><span class="ion-ios-add"></span> Instagram</a>
+                            <a href="https://github.com/KristianMariyanov" target="_blank"><span class="ion-ios-add"></span> GitHub</a>
+                            <a href="https://twitter.com/kris_mariyanov" target="_blank"><span class="ion-ios-add"></span> Twitter</a>
+                            <a href="https://www.linkedin.com/in/kristian-mariyanov" target="_blank"><span class="ion-ios-add"></span> Linkedin</a>
+                            <a href="https://www.instagram.com/kristian.code" target="_blank"><span class="ion-ios-add"></span> Instagram</a>
+                            <a href="https://www.facebook.com/K1k0o" target="_blank"><span class="ion-ios-add"></span> Facebook</a>
                         </p>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
     <div class="container-xl">
         <div class="row g-xl-5">
             <div class="col-md-6 d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div class="img img-about" style="background-image: url(images/about.jpg);">
+                <div class="img img-about" style="background-image: url(images/about.jpg); background-position-x: -7px;">
                 </div>
             </div>
             <div class="col-md-6 heading-section aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
@@ -82,8 +83,18 @@
                         <div class="tab-pane fade show active" id="aboutme" role="tabpanel" aria-labelledby="aboutme-tab">
                             <h2 class="mb-4">My Story</h2>
                             <p>
-                                Started my programming education before more than @(DateTime.Now.Year - 2014) years. Over the years my main focus was on <strong>Web and Cloud technologies</strong> but I also gain significant knowledge in different fields like <strong>Blockchain</strong>, <strong>Big Data</strong>, <strong>Reliability and Scalability</strong>.
-                                <h3 class="mb-4">I'm always passionate about coding and learning new things.</h3>
+                                I started my coding journey more than @(DateTime.Now.Year - 2014) years ago.
+                            </p>
+                            <p>
+                                Over this time my main focus were <strong>Web and Cloud technologies</strong>. I also gained significant knowledge in other fields like <strong>Blockchain</strong>, <strong>Big Data</strong>, <strong>Reliability and Scalability of systems</strong>.
+                            </p>
+                            <p>
+                                I love <strong>new technologies</strong> and <strong>hard to solve problems.</strong>
+                            </p>
+                            <p>
+                                I'm very eager about <strong>sharing my experience and knowledge</strong> with everyone.
+
+                                <h4 class="mb-3">Learning new things is my passion.</h4>
                             </p>
                         </div>
                         <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
@@ -116,7 +127,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                
+                                </div>
                                 <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <div class="progress-wrap">
                                         <h3>HTML / CSS</h3>
@@ -126,7 +137,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <div class="progress-wrap">
                                         <h3>UI/UX</h3>
@@ -136,7 +147,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <div class="progress-wrap">
                                         <h3>Blockchain & Web3</h3>
@@ -146,7 +157,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <div class="progress-wrap">
                                         <h3>Azure</h3>
@@ -156,7 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                                     <div class="progress-wrap">
                                         <h3>Scalable systems</h3>
@@ -175,35 +186,35 @@
                                         <div class="w-100">
                                             <h2>Senior Software Engineer</h2>
                                             <span class="date">2019-Present</span> <span class="position"><i class="ion-ios-pin me-2"></i>Progress Software</span>
-                                            <p>Working on a Telerik UI for Blazor and Telerik REPL for Blazor products.</p>
+                                            <p>Working on Telerik UI for Blazor and Telerik REPL for Blazor products.</p>
                                         </div>
                                     </div>
                                     <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
                                         <div class="w-100">
                                             <h2>Senior Software Engineer</h2>
                                             <span class="date">2018-2019</span> <span class="position"><i class="ion-ios-pin me-2"></i>Zoomd</span>
-                                            <p>Worked on a scalable user acquisition platform with more than 1B per minute.</p>
+                                            <p>Worked on a scalable user acquisition platform with more than 1B requests per minute.</p>
                                         </div>
                                     </div>
                                     <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
                                         <div class="w-100">
                                             <h2>Software Engineer</h2>
                                             <span class="date">2017-2018</span> <span class="position"><i class="ion-ios-pin me-2"></i>ZenCodeo</span>
-                                            <p>Designing and maintaining CRM, Task Management and communication SaaS with microservice architecture.</p>
+                                            <p>Designed and maintained CRM, Task Management and communication SaaS with microservice architecture.</p>
                                         </div>
                                     </div>
                                     <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                                         <div class="w-100">
                                             <h2>Software Manager & Team Lead</h2>
                                             <span class="date">2016-2017</span> <span class="position"><i class="ion-ios-pin me-2"></i>Software University</span>
-                                            <p>Leading a team of 8 people. I was responsible for the architecture and design on the system.</p>
+                                            <p>Led a team of 8 people. I was responsible for the architecture and design on the system.</p>
                                         </div>
                                     </div>
                                     <div class="resume-wrap d-flex align-item-stretch aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                                         <div class="w-100">
                                             <h2>Software Engineer</h2>
                                             <span class="date">2014-2016</span> <span class="position"><i class="ion-ios-pin me-2"></i>Software University</span>
-                                            <p>Worked on an educational plafrom with multiple additional modules like Payments, Certificates, CRM and Job portal.</p>
+                                            <p>Worked on an educational platform with multiple additional modules like Payments, Certificates, CRM and Job portal.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -237,7 +248,7 @@
                     </div>
                     <div class="text">
                         <h2 class="number"><span class="countup">27</span></h2>
-                        <span class="caption">Project Completed</span>
+                        <span class="caption">Projects Completed</span>
                     </div>
                 </div>
             </div>
@@ -268,7 +279,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/telerik-project.png);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://www.telerik.com/blazor-ui">Telerik UI For Blazor</a></h3>
+                        <h3><a href="https://www.telerik.com/blazor-ui" target="_blank">Telerik UI For Blazor</a></h3>
                         <span>Blazor Component Library</span>
                     </div>
                 </div>
@@ -277,7 +288,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/repl-project.png);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://blazorrepl.telerik.com/">Telerik REPL for Blazor</a></h3>
+                        <h3><a href="https://blazorrepl.telerik.com/" target="_blank">Telerik REPL for Blazor</a></h3>
                         <span>Blazor IDE In The Browser</span>
                     </div>
                 </div>
@@ -286,7 +297,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-abstract.jpg);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://zoomd.com/the-platform/">Zoomd Platform</a></h3>
+                        <h3><a href="https://zoomd.com/the-platform/" target="_blank">Zoomd Platform</a></h3>
                         <span>Scallable User Acquisition Platform</span>
                     </div>
                 </div>
@@ -295,7 +306,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-abstract.jpg);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://zoomd.com/">Marlin</a></h3>
+                        <h3><a href="https://zoomd.com/" target="_blank">Marlin</a></h3>
                         <span>Automation Tool</span>
                     </div>
                 </div>
@@ -304,7 +315,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/talkt-project.png);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://smb.talkt.com/crm-smb/">Talkt</a></h3>
+                        <h3><a href="https://smb.talkt.com/crm-smb/" target="_blank">Talkt</a></h3>
                         <span>Communication Software As A Service</span>
                     </div>
                 </div>
@@ -313,7 +324,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/suls-project.png);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://softuni.bg">Software University Learning Platforms</a></h3>
+                        <h3><a href="https://softuni.bg" target="_blank">Software University Learning Platforms</a></h3>
                         <span>Educational portal</span>
                     </div>
                 </div>
@@ -322,7 +333,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/dexeth-project.png);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="#">DexETH</a></h3>
+                        <h3><a>DexETH</a></h3>
                         <span>Decentralized Cryptocurrency Exchange</span>
                     </div>
                 </div>
@@ -331,7 +342,7 @@
                 <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/happy-me-project.png);">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://happyme.site">HappyMe</a></h3>
+                        <h3><a><!--href="https://happyme.site"-->  HappyMe</a></h3>
                         <span>Kids Educational platform</span>
                     </div>
                 </div>
@@ -367,47 +378,49 @@
                                     <div class="col-md-4">
                                         <div class="dbox w-100 d-flex align-items-start">
                                             <div class="text social-media">
-                                                <p><span>Social:</span>
-                                        <a href="https://www.facebook.com/K1k0o">Facebook</a>
-                                        <a href="https://twitter.com/kris_mariyanov">Twitter</a>
-                                        <a href="https://www.instagram.com/kristian.code/">Instagram</a>
-                                        <a href="https://www.linkedin.com/in/kristian-mariyanov/">LinkedIn</a>
-                                    </p>
+                                                <p>
+                                                    <span>Social:</span>
+                                                    <a href="https://github.com/KristianMariyanov" target="_blank">GitHub</a>
+                                                    <a href="https://twitter.com/kris_mariyanov" target="_blank">Twitter</a>
+                                                    <a href="https://www.linkedin.com/in/kristian-mariyanov/" target="_blank">LinkedIn</a>
+                                                    <a href="https://www.instagram.com/kristian.code/" target="_blank">Instagram</a>
+                                                    <a href="https://www.facebook.com/K1k0o" target="_blank">Facebook</a>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 @*<form id="contactForm" name="contactForm" class="contactForm">
                                     <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 g-recaptcha" data-sitekey="6LfksjAeAAAAANSeV7t7076if2aFb4CzXnRA7GRf"></div>
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <input type="submit" value="Send Message" class="btn btn-primary">
-                                                <div class="submitting"></div>
-                                            </div>
-                                        </div>
+                                    <div class="col-lg-6">
+                                    <div class="form-group">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
                                     </div>
-                                </form>*@
+                                    </div>
+                                    <div class="col-lg-6">
+                                    <div class="form-group">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <div class="form-group">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                    </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <div class="form-group">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Create a message here"></textarea>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-12 g-recaptcha" data-sitekey="6LfksjAeAAAAANSeV7t7076if2aFb4CzXnRA7GRf"></div>
+                                    <div class="col-md-12">
+                                    <div class="form-group">
+                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                    <div class="submitting"></div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </form>*@
                             </div>
                         </div>
                         <div class="col-lg-6 d-flex align-items-stretch">
