@@ -1,3 +1,7 @@
+@using KristianCode.Client
+
+<div id="app"></div>
+@* <KristianCode.Client.Route @rendermode="@(new InteractiveWebAssemblyRenderMode(prerender: true))"></KristianCode.Client.Route> *@
 <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
